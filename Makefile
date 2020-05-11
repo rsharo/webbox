@@ -3,7 +3,6 @@ include functs.mk
 # Build parameters
 export DOCKER ?= podman
 export DOCKER_BUILD ?= buildah bud
-export DISPLAY
 
 IMAGE := webbox
 CONTEXT := context
