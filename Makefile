@@ -21,7 +21,7 @@ clean distclean:
 	$(RM) $(PUBLIC_KEY:%=$(CONTEXT)/%)
 	$(RM) $(KEYFILES:%=$(SSH_CONFIG)/%)
 
-build install: $(CONTEXT_KEY)
+build install:
 	@$(call check-new-image,webbox) && \
 		$(MAKE) $(IMAGE) || \
 		echo "webbox already exists... not rebuilding"
@@ -29,7 +29,7 @@ build install: $(CONTEXT_KEY)
 rebuild: 
 	@$(call check-new-image,webbox) || \
 		$(call clean-image,$(IMAGE))
-	$(MAKE) build
+	$(MAKE) $(IMAGE)
 
 
 uninstall: kill
