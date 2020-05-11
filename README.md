@@ -18,7 +18,7 @@ This project builds an OCI (Docker, podman, or other container tech) image that 
   
   RHEL/CentOS 7: `sudo yum -y install docker`
   
-  Debian derivatives `sudo apt -y install docker`
+  Debian derivatives: `sudo apt -y install docker`
 
 ## Build process
   With podman: `make`

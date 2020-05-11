@@ -22,15 +22,14 @@ clean distclean:
 	$(RM) $(KEYFILES:%=$(SSH_CONFIG)/%)
 
 build install:
-	@$(call check-new-image,webbox) && \
+	@$(call check-new-image,$(IMAGE)) && \
 		$(MAKE) $(IMAGE) || \
-		echo "webbox already exists... not rebuilding"
+		echo "$(IMAGE) already exists... not rebuilding"
 
 rebuild: 
-	@$(call check-new-image,webbox) || \
+	@$(call check-new-image,$(IMAGE)) || \
 		$(call clean-image,$(IMAGE))
 	$(MAKE) $(IMAGE)
-
 
 uninstall: kill
 	$(call clean-image,$(IMAGE))
