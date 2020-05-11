@@ -3,4 +3,5 @@ Host webbox
 	Port 2022
 	User guest
 	ForwardX11 yes
+	ForwardX11Trusted yes
 	IdentityFile id_webbox
