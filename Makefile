@@ -26,10 +26,8 @@ build install:
 		$(MAKE) $(IMAGE) || \
 		echo "$(IMAGE) already exists... not rebuilding"
 
-rebuild: 
-	@$(call check-new-image,$(IMAGE)) || \
-		$(call clean-image,$(IMAGE))
-	$(MAKE) $(IMAGE)
+rebuild: uninstall
+	@$(MAKE) $(IMAGE)
 
 uninstall: kill
 	$(call clean-image,$(IMAGE))
