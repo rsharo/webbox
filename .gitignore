@@ -1,0 +1,4 @@
+context/id_webbox.pub
+webbox-ssh-config/id_webbox
+webbox-ssh-config/id_webbox.pub
+**/*.swp

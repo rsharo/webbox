@@ -1,0 +1,6 @@
+Host webbox
+	HostName localhost
+	Port 2022
+	User guest
+	ForwardX11 yes
+	IdentityFile id_webbox
