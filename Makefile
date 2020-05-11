@@ -3,7 +3,6 @@ include functs.mk
 # Build parameters
 export DOCKER ?= podman
 export DOCKER_BUILD ?= buildah bud
-export INSTALL_DIR ?= ~/.ssh
 export DISPLAY
 
 IMAGE := webbox
