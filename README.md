@@ -13,11 +13,22 @@ This project builds an OCI (Docker, podman, or other container tech) image that 
   
   Most of this comes standard on any desktop/workstation linux installation.
   
-  On CentOS 8 or Fedora, you can install podman via: `sudo dnf -y install podman`
+### Installing podman or docker
+  RHEL/CentOS 8: `sudo dnf -y install podman`
+  
+  RHEL/CentOS 7: `sudo yum -y install docker`
+  
+  Debian derivatives `sudo apt -y install docker`
 
 ## Build process
-`make`
-
+  With podman: `make`
+  
+  With docker:
+  ```
+  export DOCKER=docker
+  export DOCKER_BUILD=docker build
+  make
+  ```
 
 # Execution
 1. open two windows in this repo's top-level directory (TLD)
